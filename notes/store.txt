@@ -1,2 +1,6 @@
 ng add @ngrx/store --skip-confirmation
 
+ng add @ngrx/schematics --skip-confirmation
+
+ng generate action store/counter
+
