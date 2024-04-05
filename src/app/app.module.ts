@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './components/test/test.component';
 import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './store/reducers/counter.reducer';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from './environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,8 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ counter: counterReducer }),
+    !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25 }) : [],
   ],
   providers: [],
   bootstrap: [AppComponent]

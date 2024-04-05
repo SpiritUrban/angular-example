@@ -4,3 +4,8 @@ ng add @ngrx/schematics --skip-confirmation
 
 ng generate action store/counter
 
+ng generate reducer store/reducers/counter
+
+npm install @ngrx/store-devtools --save
+
+
