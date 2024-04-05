@@ -4,7 +4,7 @@ import { CounterActions } from './store/counter.actions';
 import { Observable } from 'rxjs';
 
 interface AppState {
-   counter:{value: number};
+  counter: { value: number };
 }
 
 @Component({

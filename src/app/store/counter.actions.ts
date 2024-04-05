@@ -4,7 +4,7 @@ export const CounterActions = createActionGroup({
   source: 'Counter',
   events: {
     'Load Counters': emptyProps(),
-    
+
     'Increment': emptyProps(),
     'Decrement': emptyProps(),
   }
