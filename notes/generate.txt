@@ -1,1 +1,4 @@
 ng g c components/test
+
+ng g s counter
+
