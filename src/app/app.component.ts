@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { CounterActions } from './store/counter.actions';
+import { CounterActions } from './store/counter/counter.actions';
 import { Observable } from 'rxjs';
 
 interface AppState {
