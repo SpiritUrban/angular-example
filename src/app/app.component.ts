@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { CounterActions } from './store/counter/counter.actions';
+import { TaskActions } from './store/task/task.actions';
 import { Observable } from 'rxjs';
 
 interface AppState {
@@ -25,6 +26,10 @@ export class AppComponent {
 
   decrement() {
     this.store.dispatch(CounterActions.decrement());
+  }
+
+  onAddTask() {
+    this.store.dispatch(TaskActions.addTask({ name: 'Angular' }));
   }
 }
 
