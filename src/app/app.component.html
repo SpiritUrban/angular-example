@@ -10,3 +10,8 @@
 
 <!-- <form [formGroup]="form"></form> -->
 <button (click)="onAddTask()">Add Task</button>
+
+<div class="task" *ngFor="let task of tasks$ | async">
+  <hr>
+{{task | json}}
+</div>

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 
 interface AppState {
   counter: { value: number };
+  task: { list: any };
 }
 
 @Component({
@@ -15,9 +16,11 @@ interface AppState {
 })
 export class AppComponent {
   count$: Observable<number>;
+  tasks$: Observable<any>;
 
   constructor(private store: Store<AppState>) {
     this.count$ = this.store.pipe(select(state => state.counter.value));
+    this.tasks$ = this.store.pipe(select(state => state.task.list));
   }
 
   increment() {
