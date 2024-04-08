@@ -9,9 +9,16 @@
 </div>
 
 <!-- <form [formGroup]="form"></form> -->
+
 <button (click)="onAddTask()">Add Task</button>
 
 <div class="task" *ngFor="let task of tasks$ | async">
   <hr>
-{{task | json}}
+  {{task | json}}
+</div>
+
+
+<div class="task" *ngFor="let post of posts$ | async">
+  <hr>
+  {{post | json}}
 </div>

@@ -7,4 +7,11 @@ ng generate reducer store/task/task
 
 npm install @ngrx/store-devtools --save
 
+npm install @ngrx/effects --save
+
+ng generate effect store/post/post
+ng generate service store/post/post
+
+
+
 
