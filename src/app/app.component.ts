@@ -3,6 +3,7 @@ import { Store, select } from '@ngrx/store';
 import { CounterActions } from './store/counter/counter.actions';
 import { TaskActions } from './store/task/task.actions';
 import { Observable } from 'rxjs';
+import { selectCounterValue } from './store/counter/counter.selectors';
 
 import { AppState } from './store/app.state';
 
@@ -15,12 +16,14 @@ import {PostActions} from './store/post/post.actions';
 })
 export class AppComponent {
   count$: Observable<number>;
+  count2$: Observable<number>;
   tasks$: Observable<any>;
   posts$: Observable<any>;
 
 
   constructor(private store: Store<AppState>) {
     this.count$ = this.store.pipe(select(state => state.counter.value));
+    this.count2$ = this.store.select(selectCounterValue);
     this.tasks$ = this.store.pipe(select(state => state.task.list));
     this.posts$ = this.store.pipe(select(state => state.post.list));
   }

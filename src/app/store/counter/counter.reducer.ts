@@ -1,13 +1,10 @@
 import { createReducer, on } from '@ngrx/store';
 import { CounterActions } from './counter.actions';
+import { CounterState } from './counter.interface';
 
 export const counterFeatureKey = 'counter';
 
-export interface State {
-  value: number;
-}
-
-export const initialState: State = {
+export const initialState: CounterState = {
   value: 0,
 };
 

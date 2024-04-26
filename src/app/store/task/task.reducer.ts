@@ -11,10 +11,12 @@ export interface Task {
 
 export interface State {
   list: Task[];
+  current: Task | null;
 }
 
 export const initialState: State = {
   list: [],
+  current: null
 };
 
 export const taskReducer = createReducer(

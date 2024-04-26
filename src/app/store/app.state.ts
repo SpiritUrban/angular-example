@@ -1,12 +1,4 @@
-// interface UserState {
-//     userData: UserData;
-//     isLoading: boolean;
-//     error: Error | null;
-//   }
-  
-//   interface UIState {
-//     sidebarOpen: boolean;
-//   }
+
 
 interface Post {
     id: number;
@@ -17,13 +9,10 @@ interface Post {
 interface PostState {
   list: Post[];
 }
-  
-  // Глобальное состояние приложения
+
   export interface AppState {
-    // user: UserState;
-    // ui: UIState;
     counter: { value: number };
-    task: { list: any };
+    task: { list: any, current: any };
     post: any
   }
   

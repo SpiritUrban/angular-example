@@ -12,6 +12,8 @@ npm install @ngrx/effects --save
 ng generate effect store/post/post
 ng generate service store/post/post
 
+ng generate selector store/counter/counter
+
 
 
 
